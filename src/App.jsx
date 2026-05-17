@@ -13,7 +13,7 @@ import Account from './pages/Account';
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import SellerInfo from "./pages/SellerInfo.jsx";
-import Test1 from "./pages/test1.jsx";
+import Test1 from "./pages/Test1.jsx";
 // import Order from "./pages/Order.jsx";
 export default function App() {
 
