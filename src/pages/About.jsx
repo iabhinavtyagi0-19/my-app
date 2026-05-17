@@ -1,6 +1,6 @@
 import "./about.css";
 import {useNavigate} from "react-router-dom";
-import Footer from "../components/footer";
+
 import NavBar from "../components/NavBar.jsx";
 export default function About() {
     const navigate = useNavigate();
