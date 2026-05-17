@@ -41,7 +41,7 @@ export default function SignIn() {
 
     }
     return (
-        <div className= "  justify-content-center text-center mt-[320px] lg:mt-[400px] w-[300px] ml-[60px] lg:ml-[800px] lg:w-[400px]  p-4 shadow-xl">
+        <div className= "  justify-content-center text-center mt-[320px] lg:mt-[400px] w-[300px] lg:ml-[800px] lg:w-[400px]  p-4 shadow-xl">
             <form onSubmit={handleSubmit} className="flex flex-col">
                 <div className="login-errors">
                     {errors.map((error, index) => (
