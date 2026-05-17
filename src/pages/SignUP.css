@@ -1,0 +1,18 @@
+.sign-form-div{
+    border: 1px solid black;
+    margin-top: 300px;
+    margin-left: 16%;
+    width: 60%;
+    padding: 24px;
+    border-radius: 15px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
+}
+.inp-sign:focus {
+    outline: none;
+    border: 2px solid blue;
+    background-color: lightblue;
+}
+.terms{
+    margin-top: 40%;
+
+}

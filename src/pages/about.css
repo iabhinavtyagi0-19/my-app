@@ -1,0 +1,54 @@
+.about-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+/* Title */
+.about-title {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0a8ae6;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+/* Cards */
+.about-section {
+    background: #ffffff;
+    padding: 20px;
+    margin: 18px 0;
+    border-radius: 12px;
+
+    /* removed border → replaced with soft shadow */
+    border: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover effect for modern feel */
+.about-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Section headings */
+.about-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Paragraph text */
+.about-section p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+}

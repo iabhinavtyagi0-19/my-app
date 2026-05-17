@@ -1,0 +1,31 @@
+.para1-lp{
+    margin-top: 150px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.heading-lp{
+    margin-top: 20%;
+}
+.btndiv-lp{
+    margin-top: 44%;
+    /*color: #c084fc;*/
+
+
+}
+.logo-lp{
+    margin-top: 32%;
+}
+.btnlp{
+    color: white;
+    margin-top: 20px;
+    font-family: Tahoma, sans-serif;
+    transition: all ease 0.4s;
+     background-color:#2C2C2C;
+    height: 24px;
+}
+.btnlp:hover{
+    background-color: grey;
+    transform: scale(0.99);
+}

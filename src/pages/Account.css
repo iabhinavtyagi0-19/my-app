@@ -1,0 +1,172 @@
+
+
+.product-account-page-div{
+    display:flex;
+    flex-wrap: wrap ;
+   /*// border: solid  2px black ;*/
+    border-radius: 5px;
+    width: 60%;
+    height: 100%;
+    margin-left: 10%;
+}
+.product-div{
+    border-radius: 8px;
+
+    width: 100%;
+    padding: 24%;
+    color: black;
+    margin-left: 10%;
+    margin-top: 8%;
+    margin-bottom: 2%;
+    transition: all ease-in-out 0.2s;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.32);
+}
+.product-div:hover{
+    transform: scale(1.08);
+
+
+}
+
+.logout-btn{
+    color: white;
+     margin-top: 5%;
+    margin-left: 50%;
+    font-family: Tahoma, sans-serif;
+    transition: all ease 0.4s;
+    background-color: black;
+    height: 24px;
+
+}
+.logout-btn:hover{
+    background-color: grey;
+    transform: scale(0.99);
+}
+.h4-account{
+  /*/  border: solid  0.2px black ;*/
+
+    font-family: Tahoma, sans-serif;
+    /*color: white;*/
+
+}
+.p3{
+    color: deepskyblue;
+    font-weight: bold;
+
+}
+.p2{
+    color: black;
+    font-weight: bold;
+
+}
+.profile-div{
+    padding: 3%;
+    border-radius: 16px;
+    margin-top: 10%;
+    width: 60%;
+    margin-left: 20%;
+    background-color: white;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.32);
+       color: black;
+
+}
+.seller-div{
+    margin-top: 10%;
+}
+.seller-div-1{
+    border: 1px solid lightgrey;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    color: black;
+    background-color: white;
+    padding: 5%;
+    margin-top: 4%;
+    border-radius: 10px;
+    margin-left: 24%;
+
+}
+.bold1{
+    color: green;
+}
+.logout{
+    color:white;
+    background-color: black;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 30px;
+}
+.seller-div-img-container {
+
+
+}
+.btn-cancel{
+    background-color: #C96442;
+    color: white;
+}
+.btn-cancel:hover{
+    background-color: darkred;
+
+}
+.h3-account{
+        /*border: 1px solid #2C2C2C;*/
+    padding: 3%;
+    width: 44%;
+    margin-left: 8%;
+    height: 24px;
+
+    /*background-color: #2C2C2C;*/
+    color: #C96442;
+
+
+    /*color: black;*/
+}
+
+.hr{
+    /*color: black;*/
+    /*width: 70%;*/
+    /*background-color: black;*/
+    /*height: 4px;*/
+}
+.div-my-orders-wishlist{
+    /*background-color: #2C2C2C;*/
+    display: flex;
+    padding-top: 2%;
+}
+.h3-account-wishlist{
+
+    /*border: 1px solid black;*/
+    padding: 3%;
+    width: 44%;
+    margin-left: 12%;
+    margin-right: 4%;
+    height: 24px;
+    /*background-color: #2C2C2C;*/
+    color: #C96442;
+
+    /*color: black;*/
+}
+.user-wishlist{
+    border: 1px solid lightgrey;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+
+    font-family: monospace;
+    color: black;
+    background-color: white;
+    padding: 5%;
+    margin-top: 4%;
+    border-radius: 10px;
+    margin-left: 24%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.wishlist-link{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+.remove{
+  background-color: white;
+    /*border: solid 1px black;*/
+    margin-bottom: 6%;
+
+}

@@ -1,0 +1,54 @@
+.navbar1 {
+    background-color: #2C2C2C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+/* Logo far left */
+.logo {
+
+    /*height: auto;*/
+    /*mix-blend-mode: multiply;*/
+    /*background: transparent;*/
+}
+
+/* Links container */
+.nav-links {
+    display: flex;
+    gap: 12px;
+}
+
+/* Buttons */
+.nav-links a {
+    display: flex;
+    flex-direction: column;   /* 👈 STACK TEXT */
+    align-items: center;
+    justify-content: center;
+    /*border-bottom: 1px solid white ;*/
+    color: white;
+    /*background-color: white;*/
+    text-decoration: none;
+    /*padding: 6px 10px;*/
+
+
+    border-radius: 1px;
+
+    font-size: 4px;
+}
+
+/* Remove extra spacing between words */
+.nav-links a span {
+    line-height: 1.1;
+}
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+        padding: 5px 6px;
+    }
+}
