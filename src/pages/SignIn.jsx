@@ -1,78 +1,101 @@
-import { useState } from 'react';
- // import './SignIn.css'
-import {useNavigate,Link} from "react-router-dom";
-import { useContext } from "react";
+import { useState, useContext } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+
 export default function SignIn() {
     const [email, setEmail] = useState('');
-    const {setUser} = useContext(AuthContext);
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
-    const  navigate = useNavigate();
 
-    async  function goHome() {
-         navigate('/home');
-    }
+    const { setUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+
     async function handleSubmit(e) {
         e.preventDefault();
 
-        const response = await fetch('http://localhost:4500/login', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email,
-                password
-            })
-        });
+        try {
+            const response = await fetch('http://localhost:4500/login', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
 
-        const data = await response.json();
-        console.log(data);
-        if(!response.ok){
-            setErrors(data.errors || []);
-            return;
+            const data = await response.json();
 
+            if (!response.ok) {
+                setErrors(data.errors || []);
+                return;
+            }
+
+            setUser(data.user);
+            localStorage.setItem("token", data.token);
+
+            navigate('/home');
+
+        } catch (err) {
+            setErrors([{ msg: "Something went wrong. Try again." }]);
         }
-        setUser(data.user);
-        localStorage.setItem("token", data.token);
-        await goHome();
-
     }
+
     return (
-        <div className= "  justify-content-center text-center mt-[320px] lg:mt-[400px] w-[300px] lg:ml-[800px] lg:w-[400px]  p-4 shadow-xl">
-            <form onSubmit={handleSubmit} className="flex flex-col">
-                <div className="login-errors">
-                    {errors.map((error, index) => (
-                        <div key={index} className="text-red-500 font-bold ">
-                            {error.msg} !
-                        </div>
-                    ))}
-                </div>
-                <div><h2 className='font-bold '>Welcome back 👋</h2></div>
+        <div className="flex items-center justify-center min-h-screen bg-gray-100">
 
-                <input
-                    className="border-2 border-black mt-[20px] "
-                    type="email"
-                    placeholder=" Enter Your Email"
-                    onChange={(e) => setEmail(e.target.value)}
-                />
+            <div className="w-[320px] lg:w-[400px] p-6 shadow-xl bg-white rounded-lg text-center">
 
-                <input
-                    className="border-2 border-black mt-[20px]"
-                    type="password"
-                    placeholder=" Enter Your Password"
-                    onChange={(e) => setPassword(e.target.value)}
-                />
+                <form onSubmit={handleSubmit} className="flex flex-col">
 
-                <button type="submit" className="font-bold  bg-[#06478d] mt-4 text-white hover:bg-sky-500  p-1 rounded ">
-                    Sign In
-                </button>
+                    {/* Errors */}
+                    <div>
+                        {errors.map((error, index) => (
+                            <div key={index} className="text-red-500 font-bold mb-2">
+                                {error.msg} !
+                            </div>
+                        ))}
+                    </div>
 
-            </form>
-            <p className='mt-16'>Don’t have an account?  <Link className='text-blue-800 font-thin' to ='/signUp'>Sign Up </Link></p>
+                    {/* Title */}
+                    <h2 className="font-bold text-xl mb-4">
+                        Welcome back 👋
+                    </h2>
+
+                    {/* Email */}
+                    <input
+                        className="border-2 border-black mt-3 p-2 rounded"
+                        type="email"
+                        placeholder="Enter Your Email"
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+
+                    {/* Password */}
+                    <input
+                        className="border-2 border-black mt-3 p-2 rounded"
+                        type="password"
+                        placeholder="Enter Your Password"
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+
+                    {/* Button */}
+                    <button
+                        type="submit"
+                        className="font-bold bg-[#06478d] mt-4 text-white hover:bg-sky-500 p-2 rounded"
+                    >
+                        Sign In
+                    </button>
+
+                </form>
+
+                {/* Sign up link */}
+                <p className="mt-6 text-sm">
+                    Don’t have an account?{" "}
+                    <Link className="text-blue-800 font-medium" to="/signUp">
+                        Sign Up
+                    </Link>
+                </p>
+
+            </div>
         </div>
     );
-
 }
